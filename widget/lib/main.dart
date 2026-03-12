@@ -27,7 +27,12 @@ class _ListorderState extends State<Listorder> {
       body: ReorderableListView(
         // call back when a user reorders the list
         onReorder: (oldIndex, newIndex) {
-        
+          // update the list of items from the reorder callback
+          setState(() {
+            if (newIndex > oldIndex) newIndex -= 1;
+            final item = itemlist.removeAt(oldIndex);
+            itemlist.insert(newIndex, item);
+          });
         },
         // list of items
         children: [
