@@ -1,16 +1,26 @@
-# widget
+# Reorderablelist view
 
-A new Flutter project.
+A list whose items the user can interactively reorder by dragging.
 
-## Getting Started
+## HOw to run
+1. Install Flutter 
+2. Clone the repostitory
+```
+bash
+git clone https://github.com/Yvette334/presentation.git
 
-This project is a starting point for a Flutter application.
+```
+```
+bash
 
-A few resources to get you started if this is your first Flutter project:
+cd widget
+flutter run
+```    
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Demostrated Attributes
+1. onReorder: This is a required callback that handles the moving of the items. It uses the newIndex and OldIndex inorder to update the data from the list.
+2. children: The list of widgets that make up the scrollable content of the app.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+3. key: It is mandatory property for each child, it allows the flutter to identify each item and how it moves during the drag
+
+!Alt[""]
